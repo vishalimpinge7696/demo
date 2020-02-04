@@ -1,0 +1,94 @@
+   
+ WORKING OF PYTHON CODE :-
+   Step 1 : The interpreter reads a python code or instruction. Then it verifies that the instruction is well formatted, i.e. it checks the syntax of each line.If it encounters any error, it immediately halts the translation and shows an error message.
+Step 2 : If there is no error, i.e. if the python instruction or code is well formatted then the interpreter translates it into its equivalent form in intermediate language called “Byte code”.Thus, after successful execution of Python script or code, it is completely translated into Byte code.
+Step 3 : Byte code is sent to the Python Virtual Machine(PVM).Here again the byte code is executed on PVM.If an error occurs during this execution then the execution is halted with an error message.
+
+  ---------------------------------------------------------------------------------------                     
+
+                                 COMMENTS,DATA TYPES AND VARIABLES IN PYTHON 
+
+t is essential to understand the flow of programming, what one is coding and what for. Generally, to do this a programmer uses comments to show what is that piece of code for, what method is used for coding/the logic behind it. These comments are not going to influence the code, but it will provide a layout for what is being done. Writing comments in code helps to improve the code as in optimization a programmer checks what needed to be improved and if comments show the method used it will be easy to optimize the program. Comments in Python also let the other developers know and understand the program. It is recommended to use a sufficient number of comments so the code wouldn’t be confusing when it looked back.
+ 
+Types of Syntax in Python
+
+In Python there are two types of syntaxes are used for comments:
+
+#: Is used to comment on one line.
+
+Triple quotes (“): To comment more than one line.
+
+In all programming languages, some syntax has been defined to identify what is what. A program is defined with a number of syntaxes for e.g., closing a line in c we use a semicolon ‘;’, To define starting of a class or loop we use colon ‘:’. As can be seen, we have a different syntax which is the part of the code and affects it. There should be some syntax that could say complier to leave commented part and go to the next step, as comments don’t have anything to do with the output. So, it is really very necessary to distinguish the comments from the actual code so that it should not be confused with the actual program.
+ 
+Creating Comments in Python
+
+A programmer must add a comment in his program to make it more understandable. Now where to add comments? It’s an individual’s choice but here are some common places where adding comments makes a program more readable.
+
+    Start of the Program
+    When defining parameters
+    Defining a class
+    Defining Methods
+    Logic for the methods/ functions
+    Description About the procedure
+    To cross-check output of a piece of code
+
+The following points have been explained below:
+1. Start of the Program
+
+Here a programmer defines what is the problem statement and what is the need of the program.
+2. When Defining Parameters
+
+Here a programmer can add comments for each parameter what it stands for, how it will help in the program.
+
+Python supports different data types as other programming languages support, for example, integer, float, string, etc. The variables are used to store the different data types values, so in other programming languages required to declare a variable of specific data type and then a variable can store the value of specific data type, but in python, this is not required. In python, we no need to declare a variable of particular data type, as it is dynamically typed language. A variable can be used to store a value of any data types and the interpreter implicitly binds with its data type. Everything in Python programming is an object, so data types are also classes and hence variables are objects or instances of these data type classes. After storing a value into a variable we can check the type of variable using the type( ) function, which is a built-in function of the python.
+
+The standard data types of python are given below :
+
+    Numbers: Number data type is used to stores numeric values.
+    String: String data type is used to stores the sequence of characters.
+    Tuple: Tuple data type is used to stores a collection of different data types of elements and it is immutable.
+    List: List data type is used to stores the collection of different data types of elements and it is mutable.
+    Set: Set data type is used to stores the collection of different data types of elements; it is mutable and store unique elements.
+    Dictionary: Dictionary data type is used to stores a collection of different data types of elements in the form of key-value pairs, it is mutable and stores unique key.
+
+Every programming language for handling temporary storage and processing of data, variables are the most preferred elements. variables are actually memory locations in the system which are tagged with specific names. Let us consider a scenario where we need to process certain values in a runtime programmatic execution. We could assume the values like 11 and 23, On program compilation and execution there is a need for us to store and process this data as needed and for accomplishing this the variables come into their role. In our case for accommodating these values consider a sample variable like X and Y has to be created in the program and insight to the program flow.
+
+The process flow of variables can be defined as below,
+
+    Creation of variable with suitable names
+    Storage of values into the variables
+    retrieve and process the variables as needed
+
+Like every other programming language variables play a critical role in python too. let us discuss detailed on python programming language variables.
+Some among the key variable types in python is as below,
+
+1. Integer: Numeric values.
+
+2. Long Integer: A integer whose length is greater than a usual integer type variable.
+
+3. Float: Variables that are intended to hold floating precession values.
+
+4. String: Variables that are intended to hold a string of letters.
+The following article, Python Variable Types provides an outline for the types in python. Perform an essential part in many programming languages, and Python is not an exception. A variable enables you to store value by simply assigning this to the identity, which may be utilized to label the value afterward inside the program. A Python handles type is different from a number of other programming languages. In many programming languages, including Java or C#, you have declared a variable type before you declare the variable itself.
+
+That variable type can be an int, float, string, char, bool and many others.
+Python Integers and Floats
+
+Integers are numbers and floats are decimal numbers. Defining integer or any other type in Python for it is very easy. Simply the type variable name and assign its numerical value.
+
+Strings
+
+We make use of strings to symbolize text. Automatically, it is Unicode text in Python 3 yet ASCII text through Python 2. Strings can be defined using single quotes, double quotes, or three times the quotes, either single or double. You cannot find any main difference in what type you utilize.
+
+Boolean and None
+
+Boolean indicates a True or a False value. You can assign any variable to be true or false, and declaring a variable as a Boolean.
+
+
+4. Lists
+
+To define a List in Python, write a variable name and assign it empty square brackets. There, you have just created an empty Python List.
+
+5. Dictionaries
+
+We wanted to add more details other than just the name to a single person like a person id, but we still want the person id to be associated with the name. We can use a dictionary in that case. In the Python dictionary, we have keys and values. In our case, the keys are name, person_id, and feedback, and the values are Dennis, 25467, and None.

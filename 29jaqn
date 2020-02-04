@@ -1,0 +1,27 @@
+############### Token Based Authontication ###############
+
+Token-based authentication is a security technique that authenticates the users who attempt to log in to a server, a network, or some other secure system, using a security token provided by the server.The service validates the security token and processes the user request.
+
+
+
+
+#### why we use Token Based Authontication ? ###########
+
+Once the user provides the username/password, a token is issued which allows users to fetch a specific resource - without using their username and password every time. This token is sent to the server with each request made by the client and contains all necessary information to validate a user's request.
+
+
+
+
+
+####### Types of Tokens  #######
+
+
+1. Access Tokens
+
+Access tokens carry the necessary information to access a resource directly. In other words, when a client passes an access token to a server managing a resource, that server can use the information contained in the token to decide whether the client is authorized or not. Access tokens usually have an expiration date and are short-lived.
+
+
+2. Refresh Tokens
+
+Refresh tokens carry the information necessary to get a new access token. In other words, whenever an access token is required to access a specific resource, a client may use a refresh token to get a new access token issued by the authentication server. Common use cases include getting new access tokens after old ones have expired, or getting access to a new resource for the first time. Refresh tokens can also expire but are rather long-lived. Refresh tokens are usually subject to strict storage requirements to ensure they are not leaked. They can also be blacklisted by the authorization server.
+

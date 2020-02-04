@@ -1,0 +1,167 @@
+
+
+                                           Setting up Flask in Ubuntu 14.04 in Virtual Environment
+
+
+Jan 15, 2015 • Bikramjot Singh Hanzra
+Posted under python flask ubuntu
+
+
+In this tutorial, we will install flask in a virtual environment. There are a number of advantages of working in a virtual environment -
+
+Firstly, we can set different configurations for each virtual environment. The packages installed in the virtual environment are not accessible outside it. It guarantees there are no conflicts with the global interpreter.
+   
+ To install new packages, virtual environments don’t require root privileges.
+
+Let’s start by creating a virtual environment -
+
+cd ~
+sudo apt-get install python-virtualenv 
+sudo apt-get install python-pip
+
+To check if virtualenv is correctly installed, type -
+
+virtualenv --version
+
+At the time this post was written, the output was -
+
+1.11.4
+
+Now let’s make a directory flask-application where we will store our project.
+
+mkdir flask-application
+cd flask-application
+
+It time to create to virtual environment flask-env, where we will install flask.
+
+virtualenv flask-env
+
+You will see the following output on the terminal -
+
+New python executable in flask-env/bin/python
+Installing setuptools, pip...done.
+
+We have successfully created our virtual environment, now let’s activate it using the command below -
+
+source flask-env/bin/activate
+
+You will now notice that on left side of your command prompt, (flask-env) appears. So now, when you install a package, it will only be accessible from the virtual environment. When you exit the virtual environment, you can no longer access any package you install inside the virtual environment. It is time to install flask. We will use pip to install the package -
+
+pip install Flask
+
+Let’s write a hello.py  script which prints "Hello World!" when we open http://127.0.0.1:5000/ in the browser -
+
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def hello():
+return "Hello World!"
+
+if (__name__ == "__main__"):
+app.run(port = 5000)
+
+Run the python script using -
+
+python hello.py
+
+In the browser, open the url http://127.0.0.1:5000/. The result looks like this -
+Webpage at localhost:5000
+Figure 1: Webpage at localhost:5000 [PNG]
+
+To deactivate the virtual environment, type the below line in the command prompt -
+
+deactivate
+
+
+__________________________________________________________________________________________________________________________________________
+## COMMAND TO CHANGE DIRECTORY:-
+
+
+(venv) ubuntu@impinge143:~/PycharmProjects/untitled/venv$ 
+#See the name first in the [] braces and then write the above command in the terminal;
+
+________________________________________________________________________________________________________________________________________________
+
+
+##  PYTHON COMMAND TO CREATE FLASK ENV. IS;
+
+type;
+pip install Flask
+
+in the terminal and this will create the environment.
+______________________________________________________________________________________________________________________________________________-
+
+## PROCESS TO OPEN OTHER PROJECT ;
+
+GO TO FILE , CLICK ON OPEN RECENT AND GO ON MANAGE PROJECTS.
+_________________________________________________________________________________________________________________________________________-
+
+## PYTHON COMMANDS TO RUN FLASK ON PRE EXISTING FILES
+
+(venv) ubuntu@impinge143:~/PycharmProjects/untitled/flask-application$ cd ..
+
+(venv) ubuntu@impinge143:~/PycharmProjects/untitled$ ls
+complex.py  demo.py  flask-application  if.py  lag.py  main.py  print.py  venv
+
+
+(venv) ubuntu@impinge143:~/PycharmProjects/untitled$ python print.py 
+ * Serving Flask app "print" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+Traceback (most recent call last):
+  File "print.py", line 65, in <module>
+    app.run(port = 5000)
+  File "/home/ubuntu/PycharmProjects/untitled/venv/lib/python3.5/site-packages/flask/app.py", line 990, in run
+    run_simple(host, port, self, **options)
+  File "/home/ubuntu/PycharmProjects/untitled/venv/lib/python3.5/site-packages/werkzeug/serving.py", line 1010, in run_simple
+    inner()
+  File "/home/ubuntu/PycharmProjects/untitled/venv/lib/python3.5/site-packages/werkzeug/serving.py", line 963, in inner
+    fd=fd,
+  File "/home/ubuntu/PycharmProjects/untitled/venv/lib/python3.5/site-packages/werkzeug/serving.py", line 806, in make_server
+    host, port, app, request_handler, passthrough_errors, ssl_context, fd=fd
+  File "/home/ubuntu/PycharmProjects/untitled/venv/lib/python3.5/site-packages/werkzeug/serving.py", line 699, in __init__
+    HTTPServer.__init__(self, server_address, handler)
+  File "/usr/lib/python3.5/socketserver.py", line 440, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.5/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/usr/lib/python3.5/socketserver.py", line 454, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+
+
+(venv) ubuntu@impinge143:~/PycharmProjects/untitled$ fuser -n tcp -k 5000
+5000/tcp:             7086
+
+
+(venv) ubuntu@impinge143:~/PycharmProjects/untitled$ python print.py 
+ * Serving Flask app "print" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

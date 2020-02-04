@@ -1,0 +1,67 @@
+t_people=int(input('Enter number of people in circle : '))
+alive=list(range(1,t_people+1))
+killed=[]
+s_holder=alive[0]
+while len(alive)!=1:
+    if s_holder==alive[-1]:
+        killed.append(alive.pop(0))
+    else:
+        killed.append(alive.pop(alive.index(s_holder)+1))
+    if s_holder==alive[-1]:
+        s_holder=alive[0]
+        continue
+    s_holder=alive[alive.index(s_holder)+1]
+    
+print('\nLast person holding Sword : '+str(s_holder)+'th')
+___________________________________________________________________________________________________
+
+persons = list(range(1,11))
+print(persons)
+while len(persons) > 1:
+    for index, person in enumerate(persons):
+        del persons[(index + 1) % len(persons)]
+
+print(persons)
+______________________________________________________________________________________________________________
+
+lst=[5,5,15,5,5,100,20]
+
+def shop(lst):
+	store=[]
+	val=False
+	for i in lst:
+		val=False
+		print('#########')
+		j=i-5
+		if val==True:
+			break
+		if i==5:
+			val=True
+			#print(type(i))
+			store.append(i)
+			#print("##########")
+			#print(store)
+			print("True")
+		elif (j%5)==0:
+			count=(j/5)
+			#print(count)
+			if count<=store.count(5):
+				#print("if")
+				#print(lst[0:count])
+				for n in store[0:count-1]:
+					store.remove(n)
+					#print(store)
+					print("True")
+___________________________________________________________________________________________________________________________
+
+ls=[5,5,10,100]
+
+def fruits(ls):
+    sum=0
+    for i in ls:
+        if i>=5:
+            sum = sum+i
+        elif sum<=i:
+            print("no change available")
+
+        fruits(ls)

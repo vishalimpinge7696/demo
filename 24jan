@@ -1,0 +1,5 @@
+https://scotch.io/tutorials/build-a-crud-web-app-with-python-and-flask-part-one
+
+SQLALCHEMY_DATABASE_URI = 'mysql://root:123@localhost:3306/test'
+api genetaed and changed
+
